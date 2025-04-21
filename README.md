@@ -32,7 +32,7 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 
 - Add this in ox_inventory/data/items.lua to create the items
 
-	
+```lua	
 	--- veek_idcards
 
 	['wallet'] = {
@@ -102,7 +102,7 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 				end
 			}
 			},
-		},
+		},```
 
 - Add this in ox_inventory\modules\items\containers.lua
 
@@ -113,6 +113,7 @@ setContainerProperties('wallet', {
 	whitelist = { 'money','card_id','card_weapon','card_driver' }
 })
 ```
+
 - Drag and drop the .png files privided in the .zip (installation folder) in ox_inventory\web\images to add the items visuals.
 
 ### Next Updates
