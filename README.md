@@ -28,6 +28,93 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 - Wallet system with whitelist for cards / money only
 - Full system integrated in ox_inventory with item right clicking to watch or show your licence cards
 
+## ⚙️ Installation
+
+- Add this in ox_inventory/data/items.lua to create the items
+
+	
+	--- veek_idcards
+
+	['wallet'] = {
+		label = 'Portefeuille',
+		weight = 10,
+		stack = false,
+	},
+
+	['card_id'] = {
+		label = "Carte d'Identité",
+		description = "Mais ... il manque ma photo ?!",
+		weight = 10,
+		stack = false,
+		buttons = {
+			{
+				label = 'Regarder sa Carte',
+				action = function(slot)
+					exports.cards:watchidcard()
+				end
+			},
+			{
+				label = 'Montrer sa Carte',
+				action = function(slot)
+					exports.cards:showidcard()
+				end
+			}
+			},
+		},
+
+	['card_driver'] = {
+		label = "Carte de Permis",
+		description = "Permis de Conduire",
+		weight = 10,
+		stack = false,
+		buttons = {
+			{
+				label = 'Regarder sa Carte',
+				action = function(slot)
+					exports.cards:watchdrivercard()
+				end
+			},
+			{
+				label = 'Montrer sa Carte',
+				action = function(slot)
+					exports.cards:showdrivercard()
+				end
+			}
+			},
+		},
+		
+	['card_weapon'] = {
+		label = "Carte de PPA",
+		description = "Permis de Port d'Arme",
+		weight = 10,
+		stack = false,
+		buttons = {
+			{
+				label = 'Regarder sa Carte',
+				action = function(slot)
+					exports.cards:watchweaponcard()
+				end
+			},
+			{
+				label = 'Montrer sa Carte',
+				action = function(slot)
+					exports.cards:showweaponcard()
+				end
+			}
+			},
+		},
+
+- Add this in ox_inventory\modules\items\containers.lua
+
+```lua
+setContainerProperties('wallet', {
+	slots = 4,
+	maxWeight = 500,
+	whitelist = { 'money','card_id','card_weapon','card_driver' }
+})
+```
+- Drag and drop the .png files privided in the .zip (installation folder) in ox_inventory\web\images to add the items visuals.
+
 ### Next Updates
 - Full English Version
 
