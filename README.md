@@ -102,7 +102,8 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 				end
 			}
 			},
-		},```
+		},
+```
 
 - Add this in ox_inventory\modules\items\containers.lua
 
