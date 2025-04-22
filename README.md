@@ -50,13 +50,13 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 			{
 				label = 'Regarder sa Carte',
 				action = function(slot)
-					exports.cards:watchidcard()
+					exports.veek_idcards:watchidcard()
 				end
 			},
 			{
 				label = 'Montrer sa Carte',
 				action = function(slot)
-					exports.cards:showidcard()
+					exports.veek_idcards:showidcard()
 				end
 			}
 			},
@@ -71,13 +71,13 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 			{
 				label = 'Regarder sa Carte',
 				action = function(slot)
-					exports.cards:watchdrivercard()
+					exports.veek_idcards:watchdrivercard()
 				end
 			},
 			{
 				label = 'Montrer sa Carte',
 				action = function(slot)
-					exports.cards:showdrivercard()
+					exports.veek_idcards:showdrivercard()
 				end
 			}
 			},
@@ -92,13 +92,13 @@ https://github.com/VeeKooN/veek_idcards/releases/latest/download/veek_idcards.zi
 			{
 				label = 'Regarder sa Carte',
 				action = function(slot)
-					exports.cards:watchweaponcard()
+					exports.veek_idcards:watchweaponcard()
 				end
 			},
 			{
 				label = 'Montrer sa Carte',
 				action = function(slot)
-					exports.cards:showweaponcard()
+					exports.veek_idcards:showweaponcard()
 				end
 			}
 			},
